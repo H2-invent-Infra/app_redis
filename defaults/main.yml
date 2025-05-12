@@ -2,9 +2,9 @@
 ## Installation options
 redis_version: 2.8.24
 redis_install_dir: /opt/redis
-redis_install_from_source: true
-redis_dir: /var/lib/redis/{{ redis_port }}
-redis_config_file_name: "{{ redis_port }}.conf"
+redis_install_from_source: false
+redis_dir: /var/lib/redis
+redis_config_file_name: "redis.conf"
 redis_download_url: "http://download.redis.io/releases/redis-{{ redis_version }}.tar.gz"
 
 redis_protected_mode: "yes"
@@ -32,7 +32,7 @@ redis_as_service: true
 # Add local facts to /etc/ansible/facts.d for Redis
 redis_local_facts: true
 # Service name
-redis_service_name: "redis_{{ redis_port }}"
+redis_service_name: "redis"
 
 ## Networking/connection options
 redis_bind: false
